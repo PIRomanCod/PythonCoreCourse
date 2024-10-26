@@ -1,0 +1,121 @@
+class Planes:
+  model = None
+  country = "USA"
+  def __init__(self, name, country, quantity):
+    self.name = name
+    self.origin = country
+    self.quantity = quantity
+?
+first_plane = Planes("MiG", "UA")
+name = first_plane.name
+country = first_plane.origin
+print(name)
+print(country)
+?
+second_plane = Planes("F35", "USA")
+franche_plane = Planes("Airbus", "French")
+?
+our_planes = [first_plane.name, second_plane.name, franche_plane.name]
+?
+?
+print(our_planes)
+?
+airbuses = Planes("Airbus", "France", 10)
+print(airbuses.quantity)
+boeing = Planes("Boeing", "USA", 30)
+print(boeing.quantity)
+?
+sum_plane = airbuses.quantity + boeing.quantity
+print(sum_plane)
+?
+?
+?
+class Planes:
+  def __init__(self, name, country):
+    self.type = "Airplane"
+    self.area = "Air"
+    self.name = name
+    self.country = country
+?
+?
+class Airbus(Planes):
+  def __init__(self):
+    self.name = "Airbus"
+    self.country = "France"
+    self.engine = 4
+    self.seat = 350
+    self.tail = 1
+?
+?
+airbus = Airbus()
+?
+print(airbus.name)
+print(airbus.engine)
+print(airbus.seat)
+?
+?
+class Rectangle:
+  def __init__(self, length, width):
+    self.length = length
+    self.width = width
+?
+  def perimetr(self):
+    return 2 * (self.length + self.width)
+?
+  def area(self):
+    return self.length * self.width
+?
+  def show(self):
+    print("The lenght is ", self.length)
+    print("The width ", self.width)
+    print("The perimeter ", self.perimetr())
+    print("The area ", self.area())
+?
+?
+class Paralelepiped(Rectangle):
+  def __init__(self, length, width, height):
+    Rectangle.__init__(self, length, width)
+    # super(Rectangle, self).__init__(length, width)
+    self.height = height
+?
+  def l_w_h(self):
+    return self.length * self.width * self.height
+?
+rectangle = Rectangle(5, 6)
+rectangle.show()
+?
+paralelepiped = Paralelepiped(4, 6, 2)
+print("PARALELEPIPED ", paralelepiped.l_w_h())
+?
+?
+class Bank:
+  def __init__(self, acount_number, name, money):
+    self.acount_number = acount_number
+    self.name = name
+    self.money= money
+?
+  def deposit(self, percent):
+    self.money = self.money + percent
+?
+  def withdraw(self, amount):
+    if self.money < amount:
+      print("No money no honney")
+    else:
+      self.money = self.money - amount - self.bank_fee()
+?
+  def bank_fee(self):
+    self.money = 0.9 * self.money
+    return self.money
+?
+  def show(self):
+    print("Account number: ", self.acount_number)
+    print("Account name: ", self.name)
+    print("Account Balance: ", self.money, " UAH")
+?
+alisa_client = Bank(12345678, "Alisa", 200000)
+?
+alisa_client.withdraw(5000)
+alisa_client.deposit(10000)
+alisa_client.show()
+a = alisa_client.bank_fee()
+print(a)

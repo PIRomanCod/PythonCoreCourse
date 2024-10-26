@@ -1,0 +1,13 @@
+n = input("Enter number: ")
+
+count = 0
+for item in n:
+    if item == "0":
+        count += 1
+print(count)
+
+# or short
+
+n = input("Enter number: ")
+
+print(n.count("0"))

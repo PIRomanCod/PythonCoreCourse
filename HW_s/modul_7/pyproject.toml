@@ -1,0 +1,10 @@
+[project]
+author = "PIRomanCod"
+name = "clean-folder-toml"
+url = "https://github.com/PIRomanCod"
+
+[build-system]
+requires = ["setuptools"]
+
+[project.scripts]
+clean-folder = "clean_folder.clean: main"

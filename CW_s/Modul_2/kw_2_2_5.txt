@@ -1,0 +1,11 @@
+# найти последнее вхождение символа Х в строке
+string = input("Enter text: ")
+index = None
+count = 0
+
+for char in string:
+    if char == "x":
+        index = count
+    count += 1
+
+print(index)

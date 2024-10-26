@@ -1,0 +1,13 @@
+# проверка числа на палиндром - чтение слева и справа - одинаково
+num = int(input("Enter 000 number: "))
+
+# first way
+n1 = num // 100
+n2 = num % 10
+
+if n1 == n2:
+    print("Yes")
+else:
+    print("No")
+
+# second way

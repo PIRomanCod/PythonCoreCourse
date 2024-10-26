@@ -1,0 +1,20 @@
+message = input("Введите сообщение: ")
+offset = int(input("Введите сдвиг: "))
+encoded_message = ""
+for ch in message:
+
+    if 32 <= ord(ch) < 63:
+        new_char = ch
+        encoded_message = encoded_message + new_char
+
+    elif 64 <= ord(ch) < 95:
+        pos = ord(ch) - ord('A')
+        pos = (pos + offset) % 26
+        new_char = chr(pos + ord('A'))
+        encoded_message = encoded_message + new_char
+    else:
+        pos = ord(ch) - ord('a')
+        pos = (pos + offset) % 26
+        new_char = chr(pos + ord('a'))
+        encoded_message = encoded_message + new_char
+print(encoded_message)

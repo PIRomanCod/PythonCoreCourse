@@ -1,0 +1,10 @@
+nginx:
+- age: 21
+  name: Іван
+  sex: male
+- age: 35
+  name: Ірина
+  sex: female
+- age: 18
+  name: Микола
+  sex: male
